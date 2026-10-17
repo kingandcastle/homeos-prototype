@@ -5,3 +5,22 @@
 .importmode{display:flex;align-items:center;gap:10px;margin:14px 0;color:#e0e9f6;font-size:13px}.importmode input{accent-color:#f7b84d;width:17px;height:17px}
 
 .regionhelp:not(:empty){font-size:.85rem;color:#c3d5e7;line-height:1.5;padding:10px 0}.regionhelp .btn{margin:8px 0 0;padding:8px 12px;font-size:.8rem;display:block}
+
+/* HomeOS 0.6.3 — mobile-first scale correction. Desktop rules untouched. */
+html{max-width:100%;overflow-x:hidden}body,#app{max-width:100%;overflow-x:clip}.shell,.tvgrid,.tvgrid>*,.section,.panel{min-width:0}.field,select{max-width:100%}
+@media(max-width:640px){
+ :root{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+ .shell{width:100%;max-width:100%;padding:0 14px calc(86px + env(safe-area-inset-bottom));}
+ .topbar{min-height:56px;gap:8px}.brand{font-size:20px;letter-spacing:-.8px}.round{width:36px;height:36px;font-size:17px}
+ .hero{min-height:240px;padding:23px 20px;border-radius:16px}.hero h1{font-size:clamp(27px,8vw,35px);letter-spacing:-1.1px;line-height:1.06;margin:10px 0}.hero p{font-size:13px;line-height:1.45;margin-bottom:14px}.hero .orb{font-size:105px}.eyebrow{font-size:10px;letter-spacing:1.7px}.actions{gap:8px}.actions .btn{min-height:40px;padding:9px 12px;font-size:12px}
+ .hero.cyan{min-height:185px;padding:18px}.hero.cyan h1{font-size:28px}.hero.cyan p{font-size:12px;margin-bottom:12px}.hero.cyan .actions .btn{min-height:36px;padding:7px 10px}
+ .section{margin-top:19px}.sectionhead{margin-bottom:9px}.sectionhead h2{font-size:17px}.hint,.muted{font-size:12px}
+ .tvgrid{grid-template-columns:minmax(0,1fr);gap:12px}.screen{width:100%;aspect-ratio:16/9;border-radius:12px}.emptyplayer{padding:12px}.emptyplayer .symbol{font-size:40px}
+ .now{margin-top:9px;gap:8px}.now strong{font-size:14px;line-height:1.25}.now .btn{padding:7px 9px;min-height:36px;font-size:12px;white-space:nowrap}
+ .channelbar{gap:5px;margin-top:8px}.channelbar .btn{min-width:35px;min-height:40px;padding:8px;font-size:16px}.channelbar select{font-size:14px;min-height:40px;padding:7px 9px}.status{font-size:12px;margin:8px 0;min-height:16px}.flex{gap:7px}.flex .btn{min-height:38px;padding:8px 11px;font-size:12px}
+ .regionbar{margin-top:10px;gap:5px}.regionbar label{font-size:12px}.regionbar select{min-height:42px;font-size:14px;padding:8px 11px}.tabs{gap:7px;margin:10px 0}.tabs .btn{min-height:38px;padding:8px 11px;font-size:12px}.field{min-height:42px;font-size:14px;padding:9px 11px}.channelrow{min-height:49px;padding:8px;margin-top:4px;gap:9px}.channellogo{width:32px;height:32px;border-radius:8px}.channeltext strong{font-size:13px}.channeltext small{font-size:11px}.favstar{font-size:20px}.list{max-height:300px}.regionhelp:not(:empty){font-size:12px;padding:6px 0}
+ .panel{padding:13px;margin-top:14px;border-radius:14px}.panel h2{font-size:17px}.rail{gap:9px}.tile{flex-basis:145px}.tile .art{height:100px}.tile .copy{padding:10px}.tile strong{font-size:13px}.tile small{font-size:11px}.service{flex-basis:150px}.service .art{height:110px}.feature{min-height:115px;padding:12px}
+ .bottom{padding:5px 3px calc(5px + env(safe-area-inset-bottom));min-height:57px}.bottom button{padding:5px 1px;gap:3px;font-size:10px;min-height:45px}.bottom button span{font-size:19px}.foot{margin:25px 0;font-size:11px}
+}
+@media(max-width:370px){.shell{padding-left:10px;padding-right:10px}.hero.cyan{min-height:170px}.hero.cyan h1{font-size:25px}.now strong{font-size:13px}.bottom button{font-size:9px}.channelbar .btn{min-width:31px}}
+@media(min-width:641px) and (max-width:900px){.shell{padding-left:3%;padding-right:3%}.hero{min-height:290px}.hero h1{font-size:clamp(34px,5vw,48px)}.tvgrid{grid-template-columns:minmax(0,1fr)}}
