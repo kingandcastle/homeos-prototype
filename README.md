@@ -1,24 +1,21 @@
-# HomeOS Prototype 0.2.1
+# HomeOS 0.2.2 — UK TV Diagnostics
 
-Static responsive HomeOS prototype for GitHub Pages. No build tools or API keys required.
+Static GitHub Pages prototype. This is an incremental update to 0.2.1, preserving the seven modules and local browser data.
+
+## New
+- Export session diagnostics as JSON: timestamps, playback events, ready/network state, video time, buffered end, error summary and source hostname (not full URL).
+- Copy a short diagnostic summary.
+- BBC iPlayer, ITVX, Channel 4 and 5 official-service launch links as fallbacks.
+- Improved handling of pause events during stream interruptions.
 
 ## Deploy
+Replace the five root files in your existing GitHub Pages repository (`main` branch, root). Refresh the deployed site. Local browser playlist settings are preserved unless you clear browser storage.
 
-1. Open https://github.com/kingandcastle/homeos-prototype
-2. Upload all five files from this ZIP to the repository root, replacing existing versions.
-3. Commit to the branch used by GitHub Pages (typically main).
-4. Open https://kingandcastle.github.io/homeos-prototype/#iptv and refresh Safari.
+## Test
+1. Play Apple HLS demo for 3 minutes.
+2. Import the UK playlist and try a channel that previously stalled.
+3. When playback stalls, wait for recovery and use Export session diagnostics.
+4. Send the JSON file for analysis, preferably after reviewing its contents. The report includes channel name, source host and browser user agent but deliberately excludes the full stream URL.
 
-## Test on iPhone
-
-1. Select **Use demo** and play Flower MP4.
-2. Select the Apple HLS test stream; let it play for 3 minutes.
-3. Import the UK M3U playlist again if needed (previous saved playlist should persist).
-4. Play an authorised live stream. Check the session time and recovery count.
-5. Use **Retry stream** if playback stalls.
-6. Mark the stream **Working** or **Unreliable**, then test **Hide unreliable channels**.
-7. Check that favourites, search, category filters, XMLTV and other HomeOS sections still work.
-
-## Notes
-
-Only one automatic retry is attempted after 12 seconds of no playback progress while the video is playing. Paused video is not treated as stalled. Safari and media provider behaviour can affect recovery. No provider restrictions or DRM are bypassed. Data stays in local browser storage; external stream requests go directly to their providers.
+## Limitations
+The app does not provide or unlock restricted streams. Official broadcaster links open external sites. HLS remains native browser playback and is not a substitute for DRM-enabled official players. Browser CORS and streaming-provider permissions remain in force. Automatic recovery does not guarantee successful playback.
