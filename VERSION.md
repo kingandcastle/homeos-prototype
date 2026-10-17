@@ -1,3 +1,3 @@
-# HomeOS 0.3.2
+# HomeOS 0.5.0 Hybrid
 
-TV viewing experience: channel dropdown and search beneath the player, previous/next channel controls, collapsible full channel browser, and five-second on-screen tuning banner.
+Combined release: TV favourites/navigation and autoplay attempt, entertainment hub, AI interface enhancements.
