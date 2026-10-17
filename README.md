@@ -1,21 +1,17 @@
-# HomeOS 0.2.2 — UK TV Diagnostics
+# HomeOS 0.2.3 — Playback Diagnostics Fix
 
-Static GitHub Pages prototype. This is an incremental update to 0.2.1, preserving the seven modules and local browser data.
+This is a complete five-file replacement for the existing HomeOS GitHub Pages repository. **Upload the contents of this ZIP to the repository root**, not a nested folder.
 
-## New
-- Export session diagnostics as JSON: timestamps, playback events, ready/network state, video time, buffered end, error summary and source hostname (not full URL).
-- Copy a short diagnostic summary.
-- BBC iPlayer, ITVX, Channel 4 and 5 official-service launch links as fallbacks.
-- Improved handling of pause events during stream interruptions.
+## Fix
+A clearly labelled **Playback diagnostics — Version 0.2.3** panel appears immediately after the IPTV player/channel browser, before the broadcaster shortcuts and playlist manager. It contains **View diagnostics**, **Copy diagnostics**, **Download JSON** and a selectable report text box. The script URL is versioned to avoid Safari loading an older cached script.
 
-## Deploy
-Replace the five root files in your existing GitHub Pages repository (`main` branch, root). Refresh the deployed site. Local browser playlist settings are preserved unless you clear browser storage.
+## How to test
+1. Upload all five files to the GitHub repository root, commit to `main`, and refresh the website.
+2. Confirm the page says **HomeOS 0.2.3** and you can see **Playback diagnostics — Version 0.2.3** below the channel browser.
+3. Select a BBC channel and attempt playback.
+4. Tap **View diagnostics** then **Copy diagnostics**; paste the result into the ChatGPT conversation. If copying is blocked, select the report text manually or download JSON.
+5. Test the Apple HLS demo again to ensure basic playback still works.
 
-## Test
-1. Play Apple HLS demo for 3 minutes.
-2. Import the UK playlist and try a channel that previously stalled.
-3. When playback stalls, wait for recovery and use Export session diagnostics.
-4. Send the JSON file for analysis, preferably after reviewing its contents. The report includes channel name, source host and browser user agent but deliberately excludes the full stream URL.
+The report deliberately omits full stream URLs, tokens and cookies. It includes channel name, source hostname, browser information, media error and event timings; review it before sharing. The report helps narrow down errors but cannot itself prove why a remote broadcaster rejects playback.
 
-## Limitations
-The app does not provide or unlock restricted streams. Official broadcaster links open external sites. HLS remains native browser playback and is not a substitute for DRM-enabled official players. Browser CORS and streaming-provider permissions remain in force. Automatic recovery does not guarantee successful playback.
+**Important:** The UK playlist contains independently maintained links, some of which may be unavailable or protected. This build does not bypass broadcaster access controls or DRM. Local browser playlists and preferences are retained.

@@ -1,10 +1,11 @@
-# HomeOS 0.2.2
+# HomeOS 0.2.3 — Diagnostics Fix
 
 17 October 2026
 
-- Preserved 0.2.1 player and seven HomeOS modules.
-- Added structured, locally generated playback diagnostics with JSON export and text summary.
-- Added optional UK broadcaster links for cases where public playlist streams fail.
-- Refined pause-status handling while a stream is stalled.
+- Adds prominent Playback diagnostics panel beneath IPTV channel/player area.
+- View diagnostics, Copy diagnostics (with selectable text fallback), Download JSON.
+- Logs media error code, readiness, network state, session events and recovery attempts.
+- Cache-busts app.js with ?v=0.2.3.
+- Retains M3U, XMLTV, favourites, channel status, HLS player, broadcaster links and seven modules.
 
-Validation: JavaScript syntax check and ZIP integrity check. Live browser playback and recovery remain to be verified by the user on iPhone.
+Does not unlock protected broadcaster streams.
