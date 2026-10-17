@@ -1,3 +1,2 @@
-# HomeOS 0.5.0 Hybrid
-
-Combined release: TV favourites/navigation and autoplay attempt, entertainment hub, AI interface enhancements.
+# HomeOS 0.5.1 — Stabilisation
+Unified Live TV favourites group, improved stall reporting, compact entertainment cards, mobile navigation improvements.
