@@ -1,11 +1,7 @@
-# HomeOS 0.2.3 — Diagnostics Fix
+# HomeOS Prototype 0.2.4
 
-17 October 2026
-
-- Adds prominent Playback diagnostics panel beneath IPTV channel/player area.
-- View diagnostics, Copy diagnostics (with selectable text fallback), Download JSON.
-- Logs media error code, readiness, network state, session events and recovery attempts.
-- Cache-busts app.js with ?v=0.2.3.
-- Retains M3U, XMLTV, favourites, channel status, HLS player, broadcaster links and seven modules.
-
-Does not unlock protected broadcaster streams.
+- Unified version constant in app.js, applied to header, settings, diagnostics and exported reports.
+- MPEG-DASH detection (.mpd), optional dash.js player loaded from jsDelivr on demand.
+- Retains native HLS on Safari and HTML5 video for MP4.
+- DASH player errors added to diagnostics; reports include playerEngine.
+- No DRM, credential or rights bypass; MSE/codec support and accessible stream required.
