@@ -1,21 +1,16 @@
-# HomeOS Version 0.2.0 — Live TV Beta
+# HomeOS 0.2.1 — IPTV Reliability & Interface Improvements
 
-Released: 17 October 2026
+Released 17 October 2026.
 
-## Added
-- Native HLS playback for browsers supporting `application/vnd.apple.mpegurl` (notably iOS Safari).
-- HTTPS M3U playlist paste, local file upload and remote URL import (subject to CORS).
-- Search, categories and favourites filtering.
-- XMLTV local-file and paste import; now/next programme lookup by `tvg-id`.
-- Explicit media error and buffering messages.
-- Apple HLS demonstration stream, and retained working Flower MP4 regression test.
+- Preserves the native HTML5 MP4 and Safari HLS playback engine.
+- Moves the player above channel browser on narrow screens.
+- Adds playback diagnostics (session seconds, recovery count, media status).
+- Detects lack of video progress while playing; attempts a maximum of one automatic recovery per selected stream.
+- Provides a manual Retry stream control.
+- Lets users mark channels Working or Unreliable, and hide unreliable entries.
+- Saves user-assigned statuses locally by stream URL.
+- Retains M3U import, XMLTV guide, favourites, categories and all other HomeOS modules.
 
-## Retained
-Dashboard, simulated AI, Entertainment, App Centre, simulated Smart Home, Settings. Existing `homeos01` local data is reused.
+## Limitations
 
-## Known limitations
-- HLS relies on native browser support; there is no hls.js fallback or transcoding backend.
-- Provider CORS, HTTPS, DRM, token expiry and rights restrictions can block streams.
-- XMLTV is manually imported, not automatically refreshed.
-- XMLTV import capped at 5,000 entries, M3U at 500 channels.
-- No backend, API keys, native app, real AI, or real home automation.
+Provider restrictions, DRM, expiring URLs and unavailable streams cannot be repaired by client-side retry. Automatic recovery is best effort; a one-off freeze is not proof of an application defect. Channel statuses are user assessments, not external uptime monitoring. Existing stored playlists are retained in the same browser storage key.

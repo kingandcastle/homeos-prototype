@@ -1,34 +1,24 @@
-# HomeOS Prototype 0.2 — Live TV Beta
+# HomeOS Prototype 0.2.1
 
-A responsive, static HTML/CSS/JavaScript application for GitHub Pages. All seven modules are retained. IPTV now has native-browser HLS, M3U playlist import, category and favourites filters, and XMLTV now/next.
+Static responsive HomeOS prototype for GitHub Pages. No build tools or API keys required.
 
-## Run locally
-Open `index.html` in a modern browser. For reliable storage and fetch behaviour, serve the directory with `python3 -m http.server 8000` and visit `http://localhost:8000`.
+## Deploy
 
-## Deploy to existing GitHub Pages
-Replace the five root files in `kingandcastle/homeos-prototype` (`index.html`, `app.js`, `manifest.webmanifest`, `README.md`, `VERSION.md`). Commit changes; keep Pages set to `main` / `/(root)`. Wait for deployment, refresh Safari and check that the HomeOS brand says 0.2.
+1. Open https://github.com/kingandcastle/homeos-prototype
+2. Upload all five files from this ZIP to the repository root, replacing existing versions.
+3. Commit to the branch used by GitHub Pages (typically main).
+4. Open https://kingandcastle.github.io/homeos-prototype/#iptv and refresh Safari.
 
-## Live TV instructions
-1. Open IPTV & Live TV. Select **Sample: Flower** and press Play to verify basic MP4 playback.
-2. Select **Sample: HLS test** and press Play in Safari to check native HLS. Stream availability can change.
-3. Paste an authorised HTTPS M3U playlist or upload a local `.m3u` file. Optionally load an HTTPS M3U URL; remote import only works when the server permits browser CORS access.
-4. Use search, the category selector and the favourites filter.
-5. Upload an XMLTV file or paste XMLTV content. The XMLTV `<programme channel="...">` must match the playlist's `tvg-id` attribute. Select a channel to view Now/Next.
+## Test on iPhone
 
-## Acceptance tests
-- [ ] Site opens on iPhone Safari and displays version 0.2.
-- [ ] All seven modules navigate correctly; no horizontal overflow.
-- [ ] Flower MP4 loads and plays.
-- [ ] HLS test stream loads and plays on a supported browser (if source is available).
-- [ ] Valid pasted M3U creates channels.
-- [ ] Local `.m3u` file imports channels.
-- [ ] Category filter and search reduce displayed channels.
-- [ ] Favourite button toggles channel; favourites-only view works.
-- [ ] Invalid M3U displays an error without crashing.
-- [ ] XMLTV with matching tvg-id shows Now/Next at the right times.
-- [ ] Unsupported/expired stream produces a readable error.
-- [ ] Reload retains local channels and favourites.
-- [ ] Simulated smart-home switches, AI and settings still work.
+1. Select **Use demo** and play Flower MP4.
+2. Select the Apple HLS test stream; let it play for 3 minutes.
+3. Import the UK M3U playlist again if needed (previous saved playlist should persist).
+4. Play an authorised live stream. Check the session time and recovery count.
+5. Use **Retry stream** if playback stalls.
+6. Mark the stream **Working** or **Unreliable**, then test **Hide unreliable channels**.
+7. Check that favourites, search, category filters, XMLTV and other HomeOS sections still work.
 
-## Limitations and security
-This is a static frontend, not a native IPTV application. Only authorised streams should be used. No DRM bypass, credential storage, APK installation, OpenAI connection, or real smart-home control. Playlists and guide data are stored in browser localStorage; do not import private subscription URLs with tokens into a shared/public device. Public GitHub repositories should never contain private playlists or credentials. GitHub Pages cannot proxy inaccessible or CORS-blocked feeds.
+## Notes
+
+Only one automatic retry is attempted after 12 seconds of no playback progress while the video is playing. Paused video is not treated as stalled. Safari and media provider behaviour can affect recovery. No provider restrictions or DRM are bypassed. Data stays in local browser storage; external stream requests go directly to their providers.
