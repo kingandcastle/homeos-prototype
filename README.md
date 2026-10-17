@@ -1,4 +1,4 @@
-# HomeOS Prototype 0.1.0
+# HomeOS Prototype 0.1.1
 
 A responsive, offline-first browser prototype. Copyright in original contributions is subject to applicable law. **HomeOS is a provisional name, not a cleared trade mark.**
 
@@ -28,7 +28,7 @@ No Node.js, Flutter, build tool or account is needed for the prototype. For prod
 | Smart Home | Interactive simulated switches and scenes | Real device controls, Home Assistant/Matter integration |
 | Settings | Theme, household name, JSON export, reset, local persistence | Cloud synchronisation and user accounts |
 
-The demo video URLs are from Google's public sample-video bucket. They require internet and may become unavailable. Importing a playlist does not guarantee playable channels. Browser playback is limited by codec, CORS, mixed-content and provider restrictions. Only access streams you are authorised to use.
+The demo video URLs are from public demonstration media hosts. They require internet and may become unavailable. Importing a playlist does not guarantee playable channels. Browser playback is limited by codec, CORS, mixed-content and provider restrictions. Only access streams you are authorised to use.
 
 ## Security and privacy
 
@@ -43,7 +43,7 @@ The demo video URLs are from Google's public sample-video bucket. They require i
 1. Open the page at desktop width and mobile width; navigation and cards must reflow without horizontal page overflow.
 2. Switch among all seven modules; each module must render.
 3. On Dashboard, observe clock updating; click Watch TV and verify navigation.
-4. IPTV: select sample Big Buck Bunny; verify a video element loads and can play with internet access. If blocked, expect an explicit playback error.
+4. IPTV: select sample Flower; verify a video element loads and can play with internet access. If blocked, expect an explicit playback error.
 5. IPTV: paste `#EXTM3U\n#EXTINF:-1 group-title="Test",Demo\nhttps://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4`; import; verify one entry appears. Search `Demo`.
 6. IPTV: favourite selected entry; verify star appears; refresh and confirm it persists.
 7. AI: submit `How do I use IPTV?`; verify a clearly simulated reply; refresh and confirm conversation persists.
@@ -79,3 +79,12 @@ The demo video URLs are from Google's public sample-video bucket. They require i
 - `manifest.webmanifest`: web-app metadata
 - `README.md`: this document, setup and tests
 - `VERSION.md`: release notes
+
+
+## 0.1.1 iPhone acceptance checks
+1. Open the deployed website in Safari and refresh.
+2. Confirm navigation fits the phone width and all seven modules open.
+3. In AI, enter a long question; confirm messages stay within the screen.
+4. In IPTV, choose Sample: Flower and press Play; check whether playback starts.
+5. If playback fails, record the new error code and screenshot.
+6. Verify theme and simulated smart-home switches still work.
