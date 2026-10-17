@@ -1,14 +1,16 @@
-# HomeOS Prototype 0.2.5
+# HomeOS Prototype 0.3.0 — Home Dashboard
 
-Upload the five files from this archive to the **root** of your existing GitHub Pages repository, replacing older copies, then commit. Visit https://kingandcastle.github.io/homeos-prototype/#iptv and refresh. The header and Settings → About should both show 0.2.5.
+This release upgrades the Home dashboard while preserving the existing IPTV, entertainment, AI demo, smart-home demo, apps and settings modules from 0.2.5.
 
-The app preserves saved playlist/settings in the same browser localStorage key. Select an authorised MPEG-DASH (.mpd) stream to load dash.js on demand from jsDelivr. Internet access is required for the DASH library; Safari HLS and ordinary MP4 do not depend on it. Playback depends on the browser, device codecs, stream access and any DRM requirements.
+## New in 0.3.0
+- Redesigned responsive home dashboard with welcome panel and quick launch
+- Clock/date, TV, entertainment, assistant, devices and system widgets
+- Customise dashboard: hide/show widgets, move up/down, compact spacing, reset
+- Customisations saved in the existing browser localStorage key (`homeos01`)
+- Unified version 0.3.0 across header, Settings and diagnostics
 
-For troubleshooting, select a channel, wait for playback or an error, then View diagnostics → Copy diagnostics without refreshing. Reports include hostname but not full URLs.
+## Deploy to GitHub Pages
+Upload **all five files** into the repository root, replacing older versions, and commit. Then visit https://kingandcastle.github.io/homeos-prototype/?v=030#dashboard
 
-## 0.2.5 changes
-- Terminal playback failures remain visible even if late `waiting` or `stalled` events arrive.
-- **Check source access** performs a browser CORS GET with an 8-second timeout and reports HTTP status/content type when visible. This is not a definitive stream or DRM test. The response body is cancelled rather than downloaded.
-- Source-check results are included in copied JSON diagnostics.
-- DASH error text redacts full URLs in the diagnostic event text.
-- The UI and application version are 0.2.5.
+## Notes
+The smart-home and AI modules are still demonstrations. Weather is intentionally not shown as live weather because no weather provider or location permission is configured. The IPTV module remains at its 0.2.5 functional baseline. No API keys are required.
