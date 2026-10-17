@@ -1,4 +1,4 @@
-# HomeOS Prototype 0.2.4
+# HomeOS Prototype 0.2.5
 
 - Unified version constant in app.js, applied to header, settings, diagnostics and exported reports.
 - MPEG-DASH detection (.mpd), optional dash.js player loaded from jsDelivr on demand.
