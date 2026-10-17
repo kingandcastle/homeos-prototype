@@ -3,3 +3,5 @@
 /* 0.6.1 — compact region browsing; preserve the existing player and saved data */
 .regionbar{display:flex;align-items:center;gap:12px;margin-top:12px}.regionbar label{color:#b9c9dd;font-size:13px;white-space:nowrap}.regionbar select{max-width:260px;min-height:42px;background:#1c2536;border-color:#ffffff35}.channelrow{min-height:58px}.channeltext small{font-size:11px}.tvgrid .list{scrollbar-width:thin}@media(max-width:640px){.regionbar{align-items:stretch;flex-direction:column;gap:7px}.regionbar select{max-width:none}.hero.cyan{min-height:230px;padding:22px}.hero.cyan h1{font-size:32px}.hero.cyan p{max-width:290px}.hero.cyan .orb{opacity:.10}.tvgrid{gap:24px}}
 .importmode{display:flex;align-items:center;gap:10px;margin:14px 0;color:#e0e9f6;font-size:13px}.importmode input{accent-color:#f7b84d;width:17px;height:17px}
+
+.regionhelp:not(:empty){font-size:.85rem;color:#c3d5e7;line-height:1.5;padding:10px 0}.regionhelp .btn{margin:8px 0 0;padding:8px 12px;font-size:.8rem;display:block}
