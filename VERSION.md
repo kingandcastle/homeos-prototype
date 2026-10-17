@@ -1,3 +1,3 @@
-# HomeOS 0.3.1
+# HomeOS 0.3.2
 
-Visual redesign: midnight-blue / indigo glass UI, cinematic navigation, responsive bottom navigation on mobile. Existing functionality retained.
+TV viewing experience: channel dropdown and search beneath the player, previous/next channel controls, collapsible full channel browser, and five-second on-screen tuning banner.
