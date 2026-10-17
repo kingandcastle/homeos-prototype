@@ -1,16 +1,16 @@
-# HomeOS Prototype 0.3.0 — Home Dashboard
+# HomeOS Prototype 0.3.1 — Visual redesign
 
-This release upgrades the Home dashboard while preserving the existing IPTV, entertainment, AI demo, smart-home demo, apps and settings modules from 0.2.5.
+Built from the 0.3.0 source. Five files: index.html, app.js, manifest.webmanifest, README.md, VERSION.md.
 
-## New in 0.3.0
-- Redesigned responsive home dashboard with welcome panel and quick launch
-- Clock/date, TV, entertainment, assistant, devices and system widgets
-- Customise dashboard: hide/show widgets, move up/down, compact spacing, reset
-- Customisations saved in the existing browser localStorage key (`homeos01`)
-- Unified version 0.3.0 across header, Settings and diagnostics
+## What changed
+- Midnight (#0B1020), navy (#182443), indigo (#303C66), teal (#57C5D5) and off-white (#F4F7FF) design.
+- Larger, atmospheric hero and glass-style widgets inspired by the supplied Plex and Apple Weather screenshots, without copying proprietary layouts or imagery.
+- Mobile navigation moved to a horizontally scrollable fixed bottom dock, with larger touch targets.
+- Preserves dashboard customisation, saved browser state, IPTV and DASH/HLS, simulated AI, simulated smart home, settings and local media.
+- Weather data is **not** implemented: the time widget accurately labels device local time and a planned weather integration.
 
-## Deploy to GitHub Pages
-Upload **all five files** into the repository root, replacing older versions, and commit. Then visit https://kingandcastle.github.io/homeos-prototype/?v=030#dashboard
+## Deploy
+Upload the five extracted files into the **root** of the existing GitHub Pages repository, replace older files and commit. Visit https://kingandcastle.github.io/homeos-prototype/?v=031#dashboard .
 
-## Notes
-The smart-home and AI modules are still demonstrations. Weather is intentionally not shown as live weather because no weather provider or location permission is configured. The IPTV module remains at its 0.2.5 functional baseline. No API keys are required.
+## Verification
+Check HomeOS 0.3.1 in Settings, dashboard, IPTV and browser refresh. Test dashboard customisation and scrolling bottom navigation on iPhone. Browser playback and third-party streams remain subject to provider limitations.

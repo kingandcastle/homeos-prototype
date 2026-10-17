@@ -1,3 +1,3 @@
-# HomeOS 0.3.0
+# HomeOS 0.3.1
 
-Focus: interactive, responsive, customisable home dashboard. Built on 0.2.5 source. No IPTV engine changes.
+Visual redesign: midnight-blue / indigo glass UI, cinematic navigation, responsive bottom navigation on mobile. Existing functionality retained.
